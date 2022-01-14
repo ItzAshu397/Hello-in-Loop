@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hello</title>
+    <link rel="icon" href="./assets/logo.png" />
+    <link rel="stylesheet" href="./style.css" />
+    <script type="text/javascript">
+      var interval = setInterval(() => {
+        document.getElementById("helloandnotice").textContent += " Hello 👋";
+        console.log("Started Hello 👋");
+      }, 750);
+
+      function stop() {
+        clearInterval(interval);
+        document.querySelector("h3").textContent =
+          "Please reload the website to start again.";
+        console.log("Stopped Hello 👋");
+      }
+    </script>
+  </head>
+  <body>
+    <h1 class="title">Hello 👋</h1>
+    <div class="button">
+      <button type="button" class="btn" onclick="stop()">Stop</button>
+    </div>
+    <h3 id="helloandnotice" class="helloandnotice"></h3>
+  </body>
+</html>
